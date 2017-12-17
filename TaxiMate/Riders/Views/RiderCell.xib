@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="88" id="kNa-bK-3tX" customClass="RiderCell" customModule="HSD" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="356" height="88"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kNa-bK-3tX" id="Gt3-qC-6gu">
+                <rect key="frame" x="0.0" y="0.0" width="356" height="87.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="f41-qZ-rEs">
+                        <rect key="frame" x="16" y="16" width="324" height="55.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGS-7v-g4U">
+                                <rect key="frame" x="0.0" y="6" width="44" height="44"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Octopus" translatesAutoresizingMaskIntoConstraints="NO" id="hXt-qC-Eld">
+                                        <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="hXt-qC-Eld" secondAttribute="bottom" id="3rH-GV-jbF"/>
+                                    <constraint firstAttribute="width" constant="44" id="51I-LN-Vvg"/>
+                                    <constraint firstItem="hXt-qC-Eld" firstAttribute="leading" secondItem="uGS-7v-g4U" secondAttribute="leading" id="B8l-UE-vSr"/>
+                                    <constraint firstItem="hXt-qC-Eld" firstAttribute="top" secondItem="uGS-7v-g4U" secondAttribute="top" id="fAG-U3-QxJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="hXt-qC-Eld" secondAttribute="trailing" id="oj1-vu-cLH"/>
+                                    <constraint firstAttribute="height" constant="44" id="uxw-mX-uaX"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="titleLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2G-IL-u3C">
+                                <rect key="frame" x="60" y="17.5" width="264" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aec-OM-naY">
+                        <rect key="frame" x="0.0" y="87" width="356" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.29999999999999999" id="zsL-yV-DD1"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="f41-qZ-rEs" firstAttribute="leading" secondItem="Gt3-qC-6gu" secondAttribute="leading" constant="16" id="6Sb-KM-tii"/>
+                    <constraint firstAttribute="trailing" secondItem="f41-qZ-rEs" secondAttribute="trailing" constant="16" id="8ga-De-hij"/>
+                    <constraint firstItem="f41-qZ-rEs" firstAttribute="top" secondItem="Gt3-qC-6gu" secondAttribute="top" constant="16" id="NVB-Dt-w97"/>
+                    <constraint firstAttribute="bottom" secondItem="aec-OM-naY" secondAttribute="bottom" id="hh7-iP-9gA"/>
+                    <constraint firstAttribute="bottom" secondItem="f41-qZ-rEs" secondAttribute="bottom" constant="16" id="jr3-sK-7iL"/>
+                    <constraint firstItem="aec-OM-naY" firstAttribute="leading" secondItem="Gt3-qC-6gu" secondAttribute="leading" id="kJA-5u-c2U"/>
+                    <constraint firstAttribute="trailing" secondItem="aec-OM-naY" secondAttribute="trailing" id="rnL-Wd-4Bd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarImageView" destination="hXt-qC-Eld" id="9xL-2W-gf6"/>
+                <outlet property="frameView" destination="uGS-7v-g4U" id="gDl-96-WLZ"/>
+                <outlet property="frameViewHeightConstraint" destination="uxw-mX-uaX" id="frf-Gx-mGf"/>
+                <outlet property="titleLabel" destination="O2G-IL-u3C" id="laI-wc-qaE"/>
+            </connections>
+            <point key="canvasLocation" x="49" y="94"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Octopus" width="120" height="120"/>
+    </resources>
+</document>
